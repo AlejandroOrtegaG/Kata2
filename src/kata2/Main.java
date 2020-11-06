@@ -7,13 +7,6 @@ public class Main {
 
         Histograma histograma = new Histograma();
 
-        /*for (int i = 0; i < data.length; i++) {
-            int j = data[i];
-            if (histograma.contains(data[i])) {
-                histograma.put(data[i], histograma.get(data[i])+1);
-            }else{
-                histograma.put(data[i],1);
-            }*/
         for (int key : data) {
             histograma.put(key, histograma.contains(key) ? histograma.get(key) + 1 : 1);
         }

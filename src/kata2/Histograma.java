@@ -25,8 +25,7 @@ class Histograma {
 
     @Override
     public String toString() {
-        /*   return "" + mapa.keySet().stream().map(x -> x + "==>" + get(x) + "\n")
-                .reduce("", String::concat);*/
+
         Object[] keys = mapa.keySet().toArray();
         Object[] values = mapa.values().toArray();
         String result = "";
