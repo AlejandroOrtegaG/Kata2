@@ -5,7 +5,7 @@ import java.util.Map;
 public class Main {
 
     public static void main(String[] args) {
-        int[] data = {1, 2, 3, 2, 2, 3, 1, 2, 5, 2, 1, 3, 2, 2, 4};
+        Integer [] data = {1, 2, 3, 2, 2, 3, 1, 2, 5, 2, 1, 3, 2, 2, 4};
         
         Histograma histo = new Histograma(data);
         Map<Integer,Integer> histogr = histo.getHistogram();

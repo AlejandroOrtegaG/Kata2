@@ -3,21 +3,21 @@ package kata2;
 import java.util.HashMap;
 import java.util.Map;
 
-class Histograma {
+class Histograma<T> {
 
-    private final int [] data;
+    private final T[] data;
 
-    public Histograma(int[] data) {
+    public Histograma(T[] data) {
         this.data = data;
     }
 
-    public int[] getData() {
+    public T[] getData() {
         return data;
     }
     
-    public Map<Integer, Integer> getHistogram(){
-        Map <Integer, Integer> histogram = new HashMap<>();
-        for (int key : data) {
+    public Map<T, Integer> getHistogram(){
+        Map <T, Integer> histogram = new HashMap<>();
+        for (T key : data) {
             histogram.put(key, histogram.containsKey(key) ? histogram.get(key) + 1 : 1);
         }
         return histogram;
