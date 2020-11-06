@@ -5,34 +5,21 @@ import java.util.Map;
 
 class Histograma {
 
-    private final Map<Integer, Integer> mapa;
+    private final int [] data;
 
-    public Histograma() {
-        this.mapa = new HashMap<>();
+    public Histograma(int[] data) {
+        this.data = data;
     }
 
-    boolean contains(int key) {
-        return mapa.containsKey(key);
+    public int[] getData() {
+        return data;
     }
-
-    void put(int key, int value) {
-        mapa.put(key, value);
-    }
-
-    public int get(int key) {
-        return mapa.get(key);
-    }
-
-    @Override
-    public String toString() {
-
-        Object[] keys = mapa.keySet().toArray();
-        Object[] values = mapa.values().toArray();
-        String result = "";
-
-        for (int i = 0; i < keys.length; i++) {
-            result += (keys[i] + "==>" + values[i] + "\n");
+    
+    public Map<Integer, Integer> getHistogram(){
+        Map <Integer, Integer> histogram = new HashMap<>();
+        for (int key : data) {
+            histogram.put(key, histogram.containsKey(key) ? histogram.get(key) + 1 : 1);
         }
-        return result;
+        return histogram;
     }
 }
