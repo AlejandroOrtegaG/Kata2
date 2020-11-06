@@ -1,7 +1,7 @@
 package kata2;
 
 import java.util.HashMap;
-import java.util.Map;  
+import java.util.Map;
 
 class Histograma {
 
@@ -23,15 +23,16 @@ class Histograma {
         return mapa.get(key);
     }
 
-    
     @Override
     public String toString() {
-     Object [] keys = mapa.keySet().toArray();
-     Object [] values = mapa.values().toArray();
-     String result = "";
-     
+        /*   return "" + mapa.keySet().stream().map(x -> x + "==>" + get(x) + "\n")
+                .reduce("", String::concat);*/
+        Object[] keys = mapa.keySet().toArray();
+        Object[] values = mapa.values().toArray();
+        String result = "";
+
         for (int i = 0; i < keys.length; i++) {
-            result+= (keys[i]+"==>" + values[i] + "\n");
+            result += (keys[i] + "==>" + values[i] + "\n");
         }
         return result;
     }
