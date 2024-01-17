@@ -30,7 +30,7 @@ public class OscarWinnerCalculator implements HistogramCalculator{
     }
 
     private int highRange(int age) {
-        return ((age/range) * range) + range + 1;
+        return ((age/range) * range) + range - 1;
     }
 
     private int lowRange(int age) {
